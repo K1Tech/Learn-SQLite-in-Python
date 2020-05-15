@@ -9,4 +9,4 @@ conn = sqlite3.connect(r'D:\Code\py\4-Database\smalldata.db')
 query = "SELECT * FROM table1"
 
 df = pd.read_sql_query(query, conn)
-print(df)
+df.to_csv(r'D:\Code\py\4-Database\output\out.csv', index=False)
